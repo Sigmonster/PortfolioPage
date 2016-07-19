@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CF Numbers Exercise</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css"/> 
+</head>
+<body>
+	<section id="gamesection">
+		<div id="game">
+		<h2>Enter 5 numbers to run them through my magical javascript algorithm!</h2>
+
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Woah! You've already played this game..</h4>
+			</div>
+			<div class="modal-body">
+				<p>Click the New Game Button to start a new game.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+			<div id="gamebox">
+				<form id="gameform">
+					<h3>Guess 1= <input type="text" name="userGuess1" id="userGuess1" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required/></h3>
+					<h3>Guess 2= <input type="text" name="userGuess2" id="userGuess2" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required/></h3>
+					<h3>Guess 3= <input type="text" name="userGuess3" id="userGuess3" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required/></h3>
+					<h3>Guess 4= <input type="text" name="userGuess4" id="userGuess4" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required/></h3>
+					<h3>Guess 5= <input type="text" name="userGuess5" id="userGuess5" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required/></h3>
+					<input type="submit" id="guessButton" class="button" name="submit" value="Guess"/>
+					<input type="button" id="newGame" class="button" name="newGame" value="New Game"/>
+				</form>
+			</div>
+			<ul id="statlist">
+				<li><h3 id="number-least">Least: </h3></li>
+				<li><h3 id="number-greatest">Greatest: </h3></li>
+				<li><h3 id="number-mean">Mean: </h3></li>
+				<li><h3 id="number-sum">Sum: </h3></li>
+				<li><h3 id="number-product">Product: </h3></li>
+			</ul>
+		</div>
+		</section>
+	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/appappNumbersExercise.js"></script>
+</body>
+</html>

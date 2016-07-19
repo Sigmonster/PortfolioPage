@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="AJSigmon" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\AJPC\\Documents\\Visual\ Studio\ 2015\\Projects\\PortfolioPage\\PortfolioPage\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\AJPC\\Documents\\Visual\ Studio\ 2015\\Projects\\PortfolioPage\\PortfolioPage\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-PortfolioPage-20160712095519.mdf;Initial Catalog=aspnet-PortfolioPage-20160712095519;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\AJPC\\Documents\\Visual\ Studio\ 2015\\Projects\\PortfolioPage\\PortfolioPage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

@@ -26,9 +26,20 @@ namespace PortfolioPage.Controllers
 
             return View();
         }
+
         public ActionResult blog()
         {
             return View();
         }
+
+        public ActionResult Projects()
+        {
+            return View();
+        }
+        public ActionResult Resume()
+        {
+            return View();
+        }
+
     }
 }

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    
+    <title></title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/owl.carousel.css" />
+    <link rel="stylesheet" href="~/css/magnific-popup.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/responsive.css" />
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">FizzBuzz Exercise</a>
+
+    <!-- Modal -->
+    <!-- ModalNumber1--><div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">FizzBuzz</h4>
+                </div>
+                <div class="modal-body">
+                        <div class="col-md-6">
+
+                            <div class="row"><h2>FizzBuzz</h2></div>
+                            <div class="row">
+                                <input type="number" name="numberFieldFizzBuzz" id="inputNumber1FizzBuzz" class="numberFieldFizzBuzz" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
+                                <input type="number" name="numberFieldFizzBuzz" id="inputNumber2FizzBuzz" class="numberFieldFizzBuzz" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
+                                <input type="button" id="submitButtonFizzBuzz" class="submitButtonFizzBuzz" value="Submit">
+                            </div>
+                                <h4 id="fizzBuzzOutput"></h4>
+                            </div>
+                        <div class="col-md-6">
+                            <div class="row">
+<pre class="Line-numbers">
+<code class="language-css">
+    $(document).ready(function () {
+    var numbersFizzBuzz = [], factor1FizzBuzz = null, factor2FizzBuzz = null;
+    /*Submit Button Click*/
+    $("div").on("click", "#submitButtonFizzBuzz", function () {
+        factor1FizzBuzz = $("#inputNumber1FizzBuzz").val();
+        factor2FizzBuzz = $("#inputNumber2FizzBuzz").val();
+        getFizzBuzzCalculation();
+        displayFizzBuzzOutput();
+    });
+    /*My Functions*/
+    function getFizzBuzzCalculation() {
+        for (var i = 0; i < 100; i++) {
+            numbersFizzBuzz[i] = i + 1;
+            if (0 == (numbersFizzBuzz[i] % factor1FizzBuzz)) {
+                if (0 == (numbersFizzBuzz[i] % factor2FizzBuzz)) {
+                    numbersFizzBuzz[i] = "FizzBuzz";
+                }
+                else {
+                    numbersFizzBuzz[i] = "Fizz";
+                }
+            }
+            else if (0 == numbersFizzBuzz[i] % factor2FizzBuzz) {
+                numbersFizzBuzz[i] = "Buzz";
+            }
+        }
+    }
+    function displayFizzBuzzOutput() { //displays array data in quick & dirty horizontal list
+        for (var i = 0; i < 100; i++) {
+            $("#fizzBuzzOutput").append(numbersFizzBuzz[i] + "<br />");
+        }
+    }
+});
+</code></pre>
+                            </div>
+                            <div class="row"><div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            
+                            </div></div>
+                </div><!-- /.modal-content -->
+
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        </section>
+                            <script type="text/javascript" src="~/js/jquery.min.js"></script>
+                            <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+                            <script type="text/javascript" src="~/js/jquery.parallax.js"></script>
+</body>
+</html>
