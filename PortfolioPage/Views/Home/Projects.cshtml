@@ -25,7 +25,7 @@
                 Launch demo modal
             </button>
 
-            <!-- Modal -->
+            <!-- Modal Test -->
             <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -46,7 +46,27 @@
                 </div>
             </div>
 
-            <!-- ModalNumber1-->
+            <!-- ModalNumber1 Numbers Exercise-->
+            <div class="container"> <!--Stacked "new game" Modal-->
+                <div class="row">
+                    <div class="modal fade" role="dialog" id="FizzBuzzGameModal" style="z-index:9999;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close newGameModal">&times;</button>
+                                    <h4 class="modal-title">Woah! You've already played this game..</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Click the New Game Button to start a new game.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default newGameModal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container col-lg-12 col-md-12 col-xs-12">
                 <div class="modal fade col-lg-12 col-md-12 col-xs-12" style="align-content:center;" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog col-lg-12 col-md-12 col-xs-12" style="position:initial; ">
@@ -63,23 +83,6 @@
                                         <section id="gamesection">
                                             <div id="game">
                                                 <h2>Enter 5 numbers to run them through my magical javascript algorithm!</h2>
-
-                                                <div id="myModal" class="modal fade" role="dialog">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                <h4 class="modal-title">Woah! You've already played this game..</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <p>Click the New Game Button to start a new game.</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div id="gamebox">
                                                     <form id="gameform">
                                                         <h3>Guess 1= <input type="text" name="userGuess1" id="userGuess1" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required /></h3>
@@ -255,18 +258,18 @@ $(document).ready(function() {
                     </div>
                 </div>
             </div><!-- /.modal -->
-            <!-- ModalNumber3-->
-            <div class="container col-lg-12 col-md-12 col-xs-12">
-                <div class="modal fade col-lg-12 col-md-12 col-xs-12" style="align-content:center;" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog col-lg-12 col-md-12 col-xs-12" style="position:initial; min-width: 800px;">
-                        <div class="modal-content col-lg-12 col-md-12 col-xs-12 FizzBuzzModal" style="width:1350px;">
-                            <div class="modal-header col-lg-12 col-md-12 col-xs-12">
+            <!-- ModalNumber3 Palindrome-->
+            <div class="container">
+                <div class="modal fade" style="align-content:center;" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 <h4 class="modal-title">Palindrome JavaScript</h4>
                             </div>
-                            <div class="modal-body col-lg-12 col-md-12 col-xs-12" style="min-height:800px; max-height:900px;">
+                            <div class="modal-body">
 
-                                <div class="col-md-6" max-height:600px;">
+                                <div class="col-md-6">
                                     <div class="row"><h2>Palindrome Project</h2></div>
                                     <div class="row">
                                         <div id="palidiv">
@@ -325,7 +328,7 @@ $(document).ready(function() {
                 </div>
             </div><!-- /.modal -->
             <!-- Modal -->
-            <!-- ModalNumber4-->
+            <!-- ModalNumber4 FizzBuzz-->
                 <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
