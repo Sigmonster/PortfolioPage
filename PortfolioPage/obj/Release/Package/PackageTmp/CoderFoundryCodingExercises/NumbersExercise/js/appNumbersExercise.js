@@ -8,8 +8,10 @@ $(document).ready(function() {
 	$("#gameform").submit(function(event){
 		event.preventDefault();
 		if (gameOver==true){
-			/*Cant get to work, with bootstrap.*///$("#myModal").modal();
-			alert("You've already played this game, click new game to play again!");
+		    /*Got this to work, but closes main modal. Moving on for now.*///
+		    $("#FizzBuzzGameModal").modal("show");
+		    $("#FizzBuzzGameModal").on("click", ".newGameModal",function(){$("#FizzBuzzGameModal").modal("hide");});
+			//alert("You've already played this game, click new game to play again!");
 			return;
 		}
 		getNumbers();

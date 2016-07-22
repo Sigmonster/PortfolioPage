@@ -1,24 +1,34 @@
 ﻿$(document).ready(function () {
+    /*Declared Variables*/
+    var NumFact = { inputFactNum: null, factorial: 1, numberFormat: false };
 
-    var NumberFactorial = { inputFactNum: null, factorial: 1 };
     /*Submit Button Click*/
     $("#divFactorial").on("click", "#submitButtonFactorial", function () {
-        NumberFactorial.inputFactNum = $("#inputNumberFactorial").val();
-        /*debug*/console.log(NumberFactorial.inputFactNum);
-        getFactorialCalculation();
-        displayOutput();
+        NumFact.inputFactNum = $("#inputNumberFactorial").val();
+        checkFactorialInputNumberFormat();
+        if(NumFact.numberFormat==true){
+            getFactorialCalculation();
+            displayFactorialOutput();
+        }
     });
     /*My Functions*/
-    function getFactorialCalculation() {
-        NumberFactorial.factorial = NumberFactorial.inputFactNum;//set multiplier
-        while (NumberFactorial.inputFactNum--, NumberFactorial.inputFactNum >= 1) {
-            NumberFactorial.factorial = NumberFactorial.factorial * NumberFactorial.inputFactNum;
+    function checkFactorialInputNumberFormat() {
+        if (NumFact.inputFactNum > -1 && NumFact.inputFactNum <= 100 && NumFact.inputFactNum % 1 == 0) {
+            NumFact.numberFormat = true;
+        }
+        else {
+            alert("Cm'on DUDE!!! Enter an Integer between 1-100!");
+            NumFact.numberFormat = false;
         }
     }
-    function displayOutput() {
-        $("#factorialspan").empty();
-        $("#factorialspan").append(NumberFactorial.factorial);
-        /*debug*/console.log("factorial=" + NumberFactorial.factorial);
+    function getFactorialCalculation() {
+        NumFact.factorial = NumFact.inputFactNum;//set multiplier
+        while (NumFact.inputFactNum--, NumFact.inputFactNum >= 1) {
+            NumFact.factorial = NumFact.factorial * NumFact.inputFactNum;
+        }
     }
-
+    function displayFactorialOutput() {
+        $("#factorialspan").empty();
+        $("#factorialspan").append(NumFact.factorial);
+    }
 });

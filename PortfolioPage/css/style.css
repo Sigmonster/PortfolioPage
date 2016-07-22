@@ -182,7 +182,7 @@
 
 
 /* 4. HEADER */
-    /*MyStyles*/
+
     #header h3{
         margin:0;
     }
@@ -404,14 +404,8 @@
 		margin-right: 10px;
 	}
 
-	.st-service p{
-        padding-right:10px; /*AJ added*/
-	}
 
-    /*Resume Section AJ Added*/ 
-    #resumePageBody{
-        margin-top:7rem;
-    }
+
     #resumelist li{
             display: inherit;
     }
@@ -420,42 +414,6 @@
     }
 
 /* 7. OUR WORKS , Now called Projects*/
-/*Modal Section*/
-    .ajproject-section{ /*AJ added*/
-        margin-top:80px;
-    }
-    .FizzBuzzModal{
-        width:1200px;
-    }
-
-    /*.modal-footer{
-       width:100%;
-       max-height:50px;
-
-
-    }
-    .FizzBuzzModalBody {
-        height:800px;
-    }
-    #portfolioModal
-    {   
-        position:absolute;
-        overflow-y: scroll;
-        height:600px;
-        width:500px;
-    }
-
-    .FizzBuzzModalDialog{
-        width: 1500px;
-        height: 600px;
-        padding-top: 10rem;
-        margin: auto;
-        margin-bottom:500px;
-        
-    }
-    .modal-custom #test{
-        height: 400px;
-    }*/
 
 	.isotope-item {
 	    z-index: 2;

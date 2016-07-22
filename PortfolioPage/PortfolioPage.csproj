@@ -230,11 +230,13 @@
     <Content Include="CoderFoundryCodingExercises\PalindromeExercise\js\jquery-3.1.0.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\AJStyles.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\magnific-popup.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\prism.css" />
+    <Content Include="css\prism-old.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
@@ -242,6 +244,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HTMLPage1.html" />
     <Content Include="images\blog\01.jpg" />
     <Content Include="images\blog\02.jpg" />
     <Content Include="images\blog\03.jpg" />
@@ -269,6 +272,7 @@
     <Content Include="images\slider\03.jpg" />
     <Content Include="images\slider\04.jpg" />
     <Content Include="images\testimonial-bg.jpg" />
+    <Content Include="images\works\JavaScriptIMG.png" />
     <Content Include="images\works\portfolio-1.jpg" />
     <Content Include="images\works\portfolio-2.jpg" />
     <Content Include="images\works\portfolio-3.jpg" />
@@ -287,6 +291,7 @@
     <Content Include="js\myscripts.js" />
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\prism.js" />
+    <Content Include="js\prism-old.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\smoothscroll.js" />
     <Content Include="js\waypoints.min.js" />

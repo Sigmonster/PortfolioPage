@@ -3,7 +3,7 @@
     var stringInputPali, stringPally, isPally = null;
 
     /*Submit Button Click*/
-    $("#palidiv").on("click", "#submitButtonPali", function () {
+    $("#divpali").on("click", "#submitButtonPali", function () {
         stringInputPali = $("#textPali").val().toUpperCase();
         getPalindrome();
         checkPaliResults();

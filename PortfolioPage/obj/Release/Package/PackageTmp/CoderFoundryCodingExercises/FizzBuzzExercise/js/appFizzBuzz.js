@@ -30,7 +30,6 @@
             $("#fizzBuzzOutput").append(numbersFizzBuzz[i] + "<br/>");
         }
     }
-
 });
 
 

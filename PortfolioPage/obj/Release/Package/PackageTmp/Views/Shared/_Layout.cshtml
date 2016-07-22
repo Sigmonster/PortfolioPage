@@ -6,8 +6,8 @@
     <title>@ViewBag.Title - AJ Sigmon Portfolio</title>
     <!-- Default Links -->
     <!-- -->
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr") <!--What is this? It's in this location but not showing in SE.  C:\Users\AJPC\Documents\Visual Studio 2015\Projects\WebApplicationDefault\packages-->
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@ <!--What is this? It's in this location but not showing in SE.  C:\Users\AJPC\Documents\Visual Studio 2015\Projects\WebApplicationDefault\packages-->
     
 
     
@@ -31,6 +31,7 @@
     <!-- My CSS -->
     <link href="~/css/prism.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/CoderFoundryCodingExercises/NumbersExercise/css/style.css" />
+    <link rel="stylesheet" href="~/css/AJStyles.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -91,9 +92,9 @@
         </footer>
     </div>
     <!--Default Scripts? Do I need these?-->
-    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false)*@
     <!--End Default Scripts? -->
     <!--My Template scripts-->
     <!-- uncommented for debug purposes -->
