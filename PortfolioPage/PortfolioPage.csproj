@@ -195,12 +195,16 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\BlogPostsController.cs" />
+    <Compile Include="Models\CodeFirst\BlogPost.cs" />
+    <Compile Include="Models\CodeFirst\Comment.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -209,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="blog.html" />
+    <Content Include="blogtest.html" />
     <Content Include="CoderFoundryCodingExercises\FactorialExercise\css\style.css" />
     <Content Include="CoderFoundryCodingExercises\FactorialExercise\index.html" />
     <Content Include="CoderFoundryCodingExercises\FactorialExercise\js\appFactor.js" />
@@ -357,6 +362,11 @@
     <Content Include="Views\Home\blog.cshtml" />
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\Resume.cshtml" />
+    <Content Include="Views\BlogPosts\Create.cshtml" />
+    <Content Include="Views\BlogPosts\Delete.cshtml" />
+    <Content Include="Views\BlogPosts\Details.cshtml" />
+    <Content Include="Views\BlogPosts\Edit.cshtml" />
+    <Content Include="Views\BlogPosts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
