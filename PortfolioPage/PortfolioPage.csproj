@@ -241,6 +241,7 @@
     <Content Include="css\magnific-popup.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\prism.css" />
+    <Content Include="css\prism-old2.css" />
     <Content Include="css\prism-old.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
@@ -296,6 +297,7 @@
     <Content Include="js\myscripts.js" />
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\prism.js" />
+    <Content Include="js\prism-old2.js" />
     <Content Include="js\prism-old.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\smoothscroll.js" />

@@ -4,7 +4,7 @@
 
     /*Submit Button Click*/
     $("#divpali").on("click", "#submitButtonPali", function () {
-        stringInputPali = $("#textPali").val().toUpperCase();
+        stringInputPali = $("#textPali").val().toUpperCase().replace(/[^A-Z0-9]/g, '');
         getPalindrome();
         checkPaliResults();
         displayPaliOutput();
@@ -19,14 +19,14 @@
         else
             isPally = false;
     }
-    function displayPaliOutput() { //displays array data in quick & dirty horizontal list
+    function displayPaliOutput() {
         if (isPally) {
             $("#verdictPali").empty();
-            $("#verdictPali").append("Woah! This is a Palindrome!");
+            $("#verdictPali").append("This is a Palindrome!");
         }
         if (isPally == false) {
             $("#verdictPali").empty();
-            $("#verdictPali").append("Sorry Dude! This is NOT a Palindrome!");
+            $("#verdictPali").append("This is NOT a Palindrome!");
         }
     }
 

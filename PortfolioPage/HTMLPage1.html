@@ -25,7 +25,6 @@
 
     <!-- My CSS -->
     <link href="/css/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/CoderFoundryCodingExercises/NumbersExercise/css/style.css" />
     <link rel="stylesheet" href="/css/AJStyles.css" />
 </head>
 <body>
@@ -213,7 +212,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="row">
-<pre class="Line-numbers col-xs-12">
+<pre class="line-numbers">
 <code class="language-css">
 $(document).ready(function() {
 	var guess=[];
@@ -333,7 +332,7 @@ $(document).ready(function() {
                                     </div>
                                     <div class="col-md-9 factorialColRight">
                                         <div class="row">
-<pre class="Line-numbers col-xs-12">
+<pre class="line-numbers">
 <code class="language-css">$(document).ready(function () {
     /*Declared Variables*/
     var NumFact = { inputFactNum: null, factorial: 1, numberFormat: false };
@@ -396,7 +395,7 @@ $(document).ready(function() {
                             </div>
                             <div class="modal-body pallyModalBody">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="row">
                                             <div id="divpali">
                                                 <input type="text" name="textFieldPali" id="textPali" class="textPali  ajModalInputFields" autocomplete="off" placeholder="Enter Number." required />
@@ -405,14 +404,14 @@ $(document).ready(function() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-8 pallyRightCol">
+                                    <div class="col-md-9 pallyRightCol">
                                         <div class="row">
-<pre class="Line-numbers col-xs-12">
+<pre class="line-numbers">
 <code class="language-css">$(document).ready(function () {
     var stringInput, stringPally, isPally = null;
     /*Submit Button Click*/
     $("div").on("click", "#submitButton", function () {
-        stringInput = $("#text").val().toUpperCase();
+        stringInput = $("#text").val().toUpperCase().replace(/[^A-Z0-9]/g, '');
         getPalindrome();
         checkResults();
         displayOutput();
@@ -430,11 +429,11 @@ $(document).ready(function() {
     function displayOutput() {
         if (isPally) {
             $("#verdict").empty();
-            $("#verdict").append("Woah! This is a Palindrome!");
+            $("#verdict").append("This is a Palindrome!");
         }
         if (isPally == false) {
             $("#verdict").empty();
-            $("#verdict").append("Sorry Dude! This is NOT a Palindrome!");
+            $("#verdict").append("This is NOT a Palindrome!");
         }
     }
 });
@@ -471,27 +470,17 @@ $(document).ready(function() {
                                     <div class="row">
                                         <div class="col-md-4 fizzyLeftCol">
                                             <div class="row">
-                                                <div class="col-xs-8">
                                                     <input type="number" name="numberFieldFizzBuzz" id="inputNumber1FizzBuzz" class="numberFieldFizzBuzz  ajModalInputFields" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
                                                     <input type="number" name="numberFieldFizzBuzz" id="inputNumber2FizzBuzz" class="numberFieldFizzBuzz  ajModalInputFields" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
-                                                </div>
-                                            </div>
-                                            <div class="row fizzySubmitRow">
-                                                <div class="col-xs-2">
                                                     <input type="button" id="submitButtonFizzBuzz" class="submitButtonFizzBuzz btn btn-success ajbtnstyles" value="Submit">
-                                                </div>
-                                            </div>
-                                            <div class="row fizzyLeftColRow">
-                                                <div>
                                                     <h4>Results:</h4>
                                                     <h4 id="fizzBuzzOutput"></h4>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-8 fizzyRightCol">
                                             <div class="row">
 
-<pre class="Line-numbers">
+<pre class="line-numbers" >
 <code class="language-css">
     $(document).ready(function () {
     var numbers = [],   
