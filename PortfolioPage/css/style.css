@@ -13,7 +13,7 @@
 	3. BUTTONS
 	4. HEADER
 	5. SLIDER
-	6. SERVICES->aboutme-section
+	6. SERVICES->skills-section
 	7. OUR WORKS->projects-section
 	8. PRICING
 	9. ABOUT US
@@ -374,13 +374,7 @@
 
 
 
-/* 6. SERVICES, changed to about-me section */
-
-	#aboutme-section{
-		background-color: #f5f5f5;
-		padding-top: 130px;
-		padding-bottom: 120px;
-	}
+/* 6. SERVICES, changed to skills section */
 
 	.section-title{
 		margin-bottom: 50px;
