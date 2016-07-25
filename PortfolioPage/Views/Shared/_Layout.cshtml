@@ -60,10 +60,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="@Url.Action("index","Home")#skills-section">Skills</a></li>
                         @*<li><a href="@Url.Action("index","Home")#our-team">Team</a></li>*@
-                        <li><a href="@Url.Action("index","Home")#contact">Contact</a></li>
                         <li><a href="@Url.Action("Resume","Home")#resume-section">Resume</a></li>
                         <li><a href="@Url.Action("Projects","Home")#project-section">Projects</a></li>
                         <li><a href="@Url.Action("blog", "Home")">Blog</a></li>
+                        <li><a href="@Url.Action("index","Home")#contact">Contact</a></li>
                     </ul>
                     @Html.Partial("_LoginPartial")  @*Antonio said to copy this to our new layout. Put it after the NavBar </ul> line.*@
 
@@ -73,14 +73,12 @@
     </header>
 
         @RenderBody()
-        <footer id="footer">
+        <footer class="footer" id="footer">
             <div class="container">
                 <div class="row">
                     <!-- SOCIAL ICONS -->
                     <div class="col-sm-6 col-sm-push-6 footer-social-icons">
                         <span>Follow Me:</span>
-                        <a href=""><i class="fa fa-facebook"></i></a>
-                        <a href=""><i class="fa fa-twitter"></i></a>
                         <a href=""><i class="fa fa-google-plus"></i></a>
                         <a href=""><i class="fa fa-pinterest-p"></i></a>
                     </div>
