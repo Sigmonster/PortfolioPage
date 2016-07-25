@@ -19,7 +19,7 @@
     // ---------------------------------------------- 
     //  magnific-popup
     // ----------------------------------------------
-	(function () {
+	/*(function () {
 
 		$('.portfolio-items').magnificPopup({ 
 			delegate: 'a',
@@ -42,7 +42,7 @@
 
 		});
 
-	}()); 
+	}());Edited by AJ to remove modal problems.*/ 
 
 
 

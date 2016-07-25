@@ -2,7 +2,7 @@
 
     var numbersFizzBuzz = [], factor1FizzBuzz = null, factor2FizzBuzz = null;
     /*Submit Button Click*/
-    $("div").on("click", "#submitButtonFizzBuzz", function () {
+    $(".fizzyLeftCol").on("click", "#submitButtonFizzBuzz", function () {
         factor1FizzBuzz = $("#inputNumber1FizzBuzz").val();
         factor2FizzBuzz = $("#inputNumber2FizzBuzz").val();
         getFizzBuzzCalculation();
@@ -26,6 +26,8 @@
         }
     }
     function displayFizzBuzzOutput() { //displays array data in quick & dirty horizontal list
+        $("#fizzBuzzOutput").empty();
+        $("#fizzBuzzOutput").show();
         for (var i = 0; i < 100; i++) {
             $("#fizzBuzzOutput").append(numbersFizzBuzz[i] + "<br/>");
         }

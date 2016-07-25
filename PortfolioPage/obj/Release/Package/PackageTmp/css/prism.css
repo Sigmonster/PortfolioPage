@@ -1,15 +1,15 @@
-/* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+clike+javascript&plugins=line-numbers */
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript&plugins=line-numbers+highlight-keywords+previewer-base */
 /**
- * prism.js Dark theme for JavaScript, CSS and HTML
- * Based on the slides of the talk “/Reg(exp){2}lained/”
- * @author Lea Verou
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
  */
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: white;
+	color: #f8f8f2;
 	background: none;
-	text-shadow: 0 -.1em .2em black;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
 	white-space: pre;
@@ -28,34 +28,23 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-@media print {
-	code[class*="language-"],
-	pre[class*="language-"] {
-		text-shadow: none;
-	}
-}
-
-pre[class*="language-"],
-:not(pre) > code[class*="language-"] {
-	background: hsl(30, 20%, 25%);
-}
-
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
-	border: .3em solid hsl(30, 20%, 40%);
-	border-radius: .5em;
-	box-shadow: 1px 1px .5em black inset;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .15em .2em .05em;
+	padding: .1em;
 	border-radius: .3em;
-	border: .13em solid hsl(30, 20%, 40%);
-	box-shadow: 1px 1px .3em -.1em black inset;
 	white-space: normal;
 }
 
@@ -63,11 +52,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: hsl(30, 20%, 50%);
+	color: slategray;
 }
 
 .token.punctuation {
-	opacity: .7;
+	color: #f8f8f2;
 }
 
 .namespace {
@@ -76,11 +65,15 @@ pre[class*="language-"] {
 
 .token.property,
 .token.tag,
-.token.boolean,
-.token.number,
 .token.constant,
-.token.symbol {
-	color: hsl(350, 40%, 70%);
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
 }
 
 .token.selector,
@@ -89,7 +82,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: hsl(75, 70%, 60%);
+	color: #a6e22e;
 }
 
 .token.operator,
@@ -98,18 +91,22 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: hsl(40, 90%, 60%);
+	color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
+.token.function {
+	color: #e6db74;
+}
+
 .token.keyword {
-	color: hsl(350, 40%, 70%);
+	color: #66d9ef;
 }
 
 .token.regex,
 .token.important {
-	color: #e90;
+	color: #fd971f;
 }
 
 .token.important,
@@ -122,10 +119,6 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
-}
-
-.token.deleted {
-	color: red;
 }
 
 pre.line-numbers {
@@ -168,3 +161,64 @@ pre.line-numbers > code {
 			padding-right: 0.8em;
 			text-align: right;
 		}
+.prism-previewer,
+.prism-previewer:before,
+.prism-previewer:after {
+	position: absolute;
+	pointer-events: none;
+}
+.prism-previewer,
+.prism-previewer:after {
+	left: 50%;
+}
+.prism-previewer {
+	margin-top: -48px;
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+
+	opacity: 0;
+	-webkit-transition: opacity .25s;
+	-o-transition: opacity .25s;
+	transition: opacity .25s;
+}
+.prism-previewer.flipped {
+	margin-top: 0;
+	margin-bottom: -48px;
+}
+.prism-previewer:before,
+.prism-previewer:after {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+}
+.prism-previewer:before {
+	top: -5px;
+	right: -5px;
+	left: -5px;
+	bottom: -5px;
+	border-radius: 10px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer:after {
+	top: 100%;
+	width: 0;
+	height: 0;
+	margin: 5px 0 0 -7px;
+	border: 7px solid transparent;
+	border-color: rgba(255, 0, 0, 0);
+	border-top-color: #fff;
+}
+.prism-previewer.flipped:after {
+	top: auto;
+	bottom: 100%;
+	margin-top: 0;
+	margin-bottom: 5px;
+	border-top-color: rgba(255, 0, 0, 0);
+	border-bottom-color: #fff;
+}
+.prism-previewer.active {
+	opacity: 1;
+}

@@ -5,13 +5,13 @@ $(document).ready(function() {
 	var numLeast, numGreatest, numSum, numMean, numProduct, gameOver=false;
 
 	//Buttons Actions that control the flow of events
-	$("#gameform").submit(function(event){
+	$("#gameformNumbers").submit(function(event){
 		event.preventDefault();
 		if (gameOver==true){
 		    /*Got this to work, but closes main modal. Moving on for now.*///
-		    $("#FizzBuzzGameModal").modal("show");
-		    $("#FizzBuzzGameModal").on("click", ".newGameModal",function(){$("#FizzBuzzGameModal").modal("hide");});
-			//alert("You've already played this game, click new game to play again!");
+		    $("#numbersGameModalNG").modal("show");
+		    $("#numbersGameModalNG").on("click", ".closeGameModalbtn", function () { $("#numbersGameModalNG").modal("hide"); });
+		    //alert("You've already played this game, click new game to play again!");
 			return;
 		}
 		getNumbers();
@@ -22,16 +22,18 @@ $(document).ready(function() {
 		getProduct();
 		displayOutput();
 	});
-	$("#gameform").on("click","#newGame",function(){
+	$("#gameformNumbers").on("click", "#newGameNumbers", function () {
 		newGame();});
 
 	//Functions for Math & Assigning Input
 	function getNumbers(){
-		guess[0]=$("#userGuess1").val();
-		guess[1]=$("#userGuess2").val();
-		guess[2]=$("#userGuess3").val();
-		guess[3]=$("#userGuess4").val();
-		guess[4]=$("#userGuess5").val();}
+	    guess[0] = $("#numbersUserGuess1").val();
+	    guess[1] = $("#numbersUserGuess2").val();
+	    guess[2] = $("#numbersUserGuess3").val();
+	    guess[3] = $("#numbersUserGuess4").val();
+	    guess[4] = $("#numbersUserGuess5").val();
+	    console.log(guess);
+    }
 	function getLeastAndGreatest(){
 		guess=guess.sort(function(a,b){return a-b});
 		numLeast=guess[0];
@@ -65,7 +67,7 @@ $(document).ready(function() {
 		resetOutputElements();
 	}
 	function clearInputFields(){
-		$(".text").val("");
+		$(".numbersGameFields").val("");
 	}
 	function resetOutputElements(){
 		$("#number-least").empty();

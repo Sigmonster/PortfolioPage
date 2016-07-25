@@ -10,104 +10,162 @@
     }
 </head>
 <body>
-    <div class="container body-content">
-        <section class="ajproject-section" id="project-section">
-            <h2>Portfolio Projects</h2>
+    <section class="our-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Portfolio Projects</h1>
+                        <span class="st-border"></span>
+                    </div>
+                </div>
+                <div class="portfolio-wrapper">
+                    <div class="col-md-12">
+                        <ul class="filter">
+                            <li><a class="active" href="#" data-filter="*">All</a></li>
+                            <li><a href="#" data-filter=".wordpress">WordPress</a></li>
+                            <li><a href="#" data-filter=".html">HTML</a></li>
+                            <li><a href="#" data-filter=".zJavaScript">JavaScript</a></li>
+                            <li><a href="#" data-filter=".php">PHP</a></li>
+                            <li><a href="#" data-filter=".bootstrap">bootstrap</a></li>
+                        </ul><!--/#portfolio-filter-->
+                    </div>
 
-            <!-- Button trigger modal 1-4 -->
-            <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Numbers JS Exercise</a>
-            <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg">Factorial JS Exercise</a>
-            <a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg">Palindrome JS Exercise</a>
-            <a data-toggle="modal" href="#myModal4" class="btn btn-primary btn-lg">FizzBuzz JS Exercise</a>
+                    <div class="portfolio-items">
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal10">
-                Launch demo modal
-            </button>
-
-            <!-- Modal Test -->
-            <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                            <!--JavaScript FizzBuzz Modal Trigger-->
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
+                                <a data-toggle="modal" href="#myModal4">
+                                    <div class="portfolio-overlay">
+                                        <h5>FizzBuzz Challenge</h5>
+                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            ...
+
+                        <div class="col-md-4 col-sm-6 work-grid html php bootstrap">
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/portfolio-2.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a href="images/works/portfolio-2.jpg"><i class="fa fa-camera-retro"></i></a>
+                                    <h5>Web Development</h5>
+                                    <p>Design, Develop</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+
+                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                            <!--JavaScript Palindrome Modal Trigger-->
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
+                                <a data-toggle="modal" href="#myModal3">
+                                    <div class="portfolio-overlay">
+                                        <h5>Palindrome Challenge</h5>
+                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 work-grid html php bootstrap">
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/portfolio-4.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a href="images/works/portfolio-4.jpg"><i class="fa fa-camera-retro"></i></a>
+                                    <h5>Web Development</h5>
+                                    <p>Design, Develop</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                            <!--JavaScript Factorial Modal Trigger-->
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
+                                <a data-toggle="modal" href="#myModal2">
+                                    <div class="portfolio-overlay">
+                                        <h5>Factorial Challenge</h5>
+                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                            <!--JavaScript-->
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
+                                <a data-toggle="modal" href="#myModal1">
+                                    <div class="portfolio-overlay">
+                                        <h5>Numbers Challenge</h5>
+                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- ModalNumber1 Numbers Exercise-->
-            <div class="container"> <!--Stacked "new game" Numbers Exercise Modal-->
-                <div class="row">
-                    <div class="modal fade" role="dialog" id="FizzBuzzGameModal" style="z-index:9999;">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close newGameModal">&times;</button>
-                                    <h4 class="modal-title">Woah! You've already played this game..</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Click the New Game Button to start a new game.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default newGameModal">Close</button>
-                                </div>
+        </div>
+        <!-- ModalNumber1 Numbers Challenge-->
+        <div class="container">
+            <!--Stacked "new game" Numbers Challenege Modal-->
+            <div class="row">
+                <div class="modal fade" role="dialog" id="numbersGameModalNG" style="z-index:9999;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header numbersGameStackedModal">
+                                <button type="button" class="close closeGameModalbtn">&times;</button>
+                                <h4 class="modal-title">Woah! You've already played this game..</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Click the New Game Button to start a new game.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success closeGameModalbtn ajbtnstyles" id="closeGameModalbtn">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!-- Numbers Exercise Modal Start-->
-            <div class="container col-lg-12 col-md-12 col-xs-12">
-                <div class="modal fade col-lg-12 col-md-12 col-xs-12" style="align-content:center;" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog col-lg-12 col-md-12 col-xs-12" style="position:initial; ">
-                        <div class="modal-content col-lg-12 col-md-12 col-xs-12 FizzBuzzModal" style="width:1850px; height: 1650px;">
-                            <div class="modal-header col-lg-12 col-md-12 col-xs-12">
+            </div>
+        </div><!-- Numbers Exercise Modal Start-->
+        <div class="container">
+            <div class="row">
+                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 <h4 class="modal-title">Numbers JavaScript</h4>
                             </div>
-                            <div class="modal-body col-lg-12 col-md-12 col-xs-12" style="min-height:800px; max-height:900px;">
-
-                                <div class="col-md-6" max-height:600px;">
-                                    <div class="row"><h2>Numbers Project</h2></div>
-                                    <div class="row">
-                                        <section id="gamesection">
-                                            <div id="game">
-                                                <h2>Enter 5 numbers to run them through my magical javascript algorithm!</h2>
-                                                <div id="gamebox">
-                                                    <form id="gameform">
-                                                        <h3>Guess 1= <input type="text" name="userGuess1" id="userGuess1" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required /></h3>
-                                                        <h3>Guess 2= <input type="text" name="userGuess2" id="userGuess2" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required /></h3>
-                                                        <h3>Guess 3= <input type="text" name="userGuess3" id="userGuess3" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required /></h3>
-                                                        <h3>Guess 4= <input type="text" name="userGuess4" id="userGuess4" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required /></h3>
-                                                        <h3>Guess 5= <input type="text" name="userGuess5" id="userGuess5" class="text" maxlength="2" autocomplete="off" placeholder="Enter your Guess" required /></h3>
-                                                        <input type="submit" id="guessButton" class="button" name="submit" value="Guess" />
-                                                        <input type="button" id="newGame" class="button" name="newGame" value="New Game" />
-                                                    </form>
-                                                </div>
-                                                <ul id="statlist">
-                                                    <li><h3 id="number-least">Least: </h3></li>
-                                                    <li><h3 id="number-greatest">Greatest: </h3></li>
-                                                    <li><h3 id="number-mean">Mean: </h3></li>
-                                                    <li><h3 id="number-sum">Sum: </h3></li>
-                                                    <li><h3 id="number-product">Product: </h3></li>
-                                                </ul>
-                                            </div>
-                                        </section>
+                            <div class="modal-body numbersExerciseModalBody">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <form id="gameformNumbers">
+                                                <input type="number" name="numbersUserGuess1" id="numbersUserGuess1" class="numbersGameFields ajModalInputFields" maxlength="3" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="number" name="numbersUserGuess2" id="numbersUserGuess2" class="numbersGameFields ajModalInputFields" maxlength="3" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="number" name="numbersUserGuess3" id="numbersUserGuess3" class="numbersGameFields ajModalInputFields" maxlength="3" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="number" name="numbersUserGuess4" id="numbersUserGuess4" class="numbersGameFields ajModalInputFields" maxlength="3" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="number" name="numbersUserGuess5" id="numbersUserGuess5" class="numbersGameFields ajModalInputFields" maxlength="3" autocomplete="off" placeholder="Enter Number." required /><br />
+                                                <input type="submit" id="numbersGuessButton" class="btn btn-success ajbtnstyles" name="submit" value="Guess" />
+                                                <input type="button" id="newGameNumbers" class="btn btn-success ajbtnstyles" name="newGameNumbers" value="New Game" />
+                                            </form>
+                                        </div>
+                                        <div class="row">
+                                            <h4 id="number-least">Least: </h4>
+                                            <h4 id="number-greatest">Greatest: </h4>
+                                            <h4 id="number-mean">Mean: </h4>
+                                            <h4 id="number-sum">Sum: </h4>
+                                            <h4 id="number-product">Product: </h4>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row">
-<pre class="Line-numbers col-xs-12">
+                                    <div class="col-md-8">
+                                        <div class="row">
+<pre class="line-numbers">
 <code class="language-css">
 $(document).ready(function() {
 	var guess=[];
@@ -153,7 +211,7 @@ $(document).ready(function() {
             }
             numProduct=product;
             }
-//Fuctions for Displaying Output or Resetting Output for a New Game
+//Fuctions for Displaying Output or Resetting Output
 	function displayOutput(){
 		$("#number-least").append(numLeast);
 		$("#number-greatest").append(numGreatest);
@@ -185,43 +243,49 @@ $(document).ready(function() {
 	}
 });
 </code></pre>
-                                    </div>
-                                    <div class="row">
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                                        </div>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div>
-                        </div><!-- /.modal-dialog -->
-                    </div>
-                </div>
-            </div><!-- /.modal -->
-            <!-- ModalNumber2-->
-            <div class="container col-lg-12 col-md-12 col-xs-12">
-                <div class="modal fade col-lg-12 col-md-12 col-xs-12" style="align-content:center;" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog col-lg-12 col-md-12 col-xs-12" style="position:initial; min-width: 800px;">
-                        <div class="modal-content col-lg-12 col-md-12 col-xs-12 FizzBuzzModal" style="">
-                            <div class="modal-header col-lg-12 col-md-12 col-xs-12">
+                                        </div><!-- Second Column Row -->
+                                    </div><!-- Second Column -->
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary btn-lg ajbtnstyles" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div><!-- footer row-->
+                                    </div><!-- footer column-->
+                                </div><!-- modal body row -->
+                            </div><!-- modal body -->
+                        </div><!-- modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- Main Modal -->
+            </div><!-- modal container row-->
+        </div><!-- modal container-->
+        <!-- ModalNumber2 Factorial-->
+        <div class="container">
+            <div class="row">
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 <h4 class="modal-title">Factorial JavaScript</h4>
                             </div>
-                            <div class="modal-body col-lg-12 col-md-12 col-xs-12" style=" max-height:900px;">
-
-                                <div class="col-md-6" max-height:600px;">
-                                    <div class="row"><h2>Factorial Project</h2></div>
-                                    <div class="row">
-                                        <div id="divFactorial">
-                                            <input type="number" name="numberFieldFactorial" min="0" id="inputNumberFactorial" class="numberFieldFactorial" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
-                                            <input type="button" id="submitButtonFactorial" class="submitButtonFactorial" value="Submit">
-                                            <h2>Factorial:<span id="factorialspan"></span></h2>
+                            <div class="modal-body factorialModalBody">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div id="divFactorial">
+                                                <input type="number" name="numberFieldFactorial" min="0" id="inputNumberFactorial" class="numberFieldFactorial  ajModalInputFields" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="button" id="submitButtonFactorial" class="submitButtonFactorial btn btn-success ajbtnstyles" value="Submit">
+                                                <h4>Factorial:</h4>
+                                                <row>
+                                                    <h4 id="factorialspan"></h4>
+                                                </row>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row">
-<pre class="Line-numbers col-xs-12">
+                                    <div class="col-md-9 factorialColRight">
+                                        <div class="row">
+<pre class="line-numbers">
 <code class="language-css">$(document).ready(function () {
     /*Declared Variables*/
     var NumFact = { inputFactNum: null, factorial: 1, numberFormat: false };
@@ -256,49 +320,51 @@ $(document).ready(function() {
     }
 });
 </code></pre>
-                                    </div>
-                                    <div class="row">
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                                        </div>
-                                    </div>
-                                </div><!-- /.modal-content -->
+                                        </div><!--Second Column Row-->
+                                    </div><!--Second Column-->
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary btn-lg ajbtnstyles" data-dismiss="modal">Close</button>
+                                            </div><!-- /.modal-footer -->
+                                        </div><!--footer row-->
+                                    </div><!--footer column-->
+                                </div><!--Modal-Body Row-->
+                            </div><!--Modal-Body-->
+                        </div><!--Modal-Content-->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div><!--Container Row-->
+        </div><!--Modal Container-->
+        <!-- ModalNumber3 Palindrome-->
+        <div class="container col-md-12">
+            <div class="row">
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">Palindrome JavaScript</h4>
                             </div>
-                        </div><!-- /.modal-dialog -->
-                    </div>
-                </div>
-            </div><!-- /.modal -->
-            <!-- ModalNumber3 Palindrome-->
-            <div class="container">
-                <div class="row">
-                    <div class="modal fade" style="align-content:center;" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">Palindrome JavaScript</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="row" style="margin-left:10px">
-                                                <div id="palidiv">
-                                                    <input type="text" name="textFieldPali" id="textPali" class="textPali" autocomplete="off" placeholder="Enter Number." required />
-                                                    <input type="button" id="submitButtonPali" class="submitButtonPali" value="Submit">
-                                                    <h3 id="verdictPali"></h3>
-                                                </div>
+                            <div class="modal-body pallyModalBody">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div id="divpali">
+                                                <input type="text" name="textFieldPali" id="textPali" class="textPali  ajModalInputFields" autocomplete="off" placeholder="Enter Text." required />
+                                                <input type="button" id="submitButtonPali" class="submitButtonPali btn btn-success ajbtnstyles" value="Submit">
+                                                <h3 id="verdictPali"></h3>
                                             </div>
                                         </div>
-                                        <div class="col-md-8">
-                                            <div class="row">
-<pre class="Line-numbers col-xs-12">
-<code class="language-css">
-       $(document).ready(function () {
+                                    </div>
+                                    <div class="col-md-9 pallyRightCol">
+                                        <div class="row">
+<pre class="line-numbers">
+<code class="language-css">$(document).ready(function () {
     var stringInput, stringPally, isPally = null;
     /*Submit Button Click*/
     $("div").on("click", "#submitButton", function () {
-        stringInput = $("#text").val().toUpperCase();
+        stringInput = $("#text").val().toUpperCase().replace(/[^A-Z0-9]/g, '');
         getPalindrome();
         checkResults();
         displayOutput();
@@ -313,207 +379,115 @@ $(document).ready(function() {
         else
             isPally = false;
     }
-    function displayOutput() { //displays array data in quick & dirty horizontal list
+    function displayOutput() {
         if (isPally) {
             $("#verdict").empty();
-            $("#verdict").append("Woah! This is a Palindrome!");
+            $("#verdict").append("This is a Palindrome!");
         }
         if (isPally == false) {
             $("#verdict").empty();
-            $("#verdict").append("Sorry Dude! This is NOT a Palindrome!");
+            $("#verdict").append("This is NOT a Palindrome!");
         }
     }
 });
 </code></pre>
-                                            </div>
-                                            <div class="row">
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
-                                        </div><!-- Second Column -->
-                                    </div><!-- /.modal-body Row -->
-                                </div><!-- /.modal-body -->
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                </div><!--Container Row-->
-            </div><!--Container-->
-
-            <!-- Modal -->
-            <!-- ModalNumber4 FizzBuzz-->
-                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">FizzBuzz JavaScript</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="row">
-                                            <input type="number" name="numberFieldFizzBuzz" id="inputNumber1FizzBuzz" class="numberFieldFizzBuzz" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
-                                            <input type="number" name="numberFieldFizzBuzz" id="inputNumber2FizzBuzz" class="numberFieldFizzBuzz" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
-                                            <input type="button" id="submitButtonFizzBuzz" class="submitButtonFizzBuzz btn btn-success" value="Submit">
-                                        </div>
-                                        <div class="row" style="height:450px; overflow-y: scroll;">
-                                            <div id="portfolioModal">
-                                                <h4 id="fizzBuzzOutput"></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="row" style="margin-left:10px;">
-
-<pre class="Line-numbers">
-<code class="language-css">
-    $(document).ready(function () {
-    var numbersFizzBuzz = [], factor1FizzBuzz = null, factor2FizzBuzz = null;
-    /*Submit Button Click*/
-    $("div").on("click", "#submitButtonFizzBuzz", function () {
-        factor1FizzBuzz = $("#inputNumber1FizzBuzz").val();
-        factor2FizzBuzz = $("#inputNumber2FizzBuzz").val();
-        getFizzBuzzCalculation();
-        displayFizzBuzzOutput();
-    });
-    /*My Functions*/
-    function getFizzBuzzCalculation() {
-        for (var i = 0; i < 100; i++) {
-            numbersFizzBuzz[i] = i + 1;
-            if (0 == (numbersFizzBuzz[i] % factor1FizzBuzz)) {
-                if (0 == (numbersFizzBuzz[i] % factor2FizzBuzz)) {
-                    numbersFizzBuzz[i] = "FizzBuzz";
-                }
-                else {
-                    numbersFizzBuzz[i] = "Fizz";
-                }
-            }
-            else if (0 == numbersFizzBuzz[i] % factor2FizzBuzz) {
-                numbersFizzBuzz[i] = "Buzz";
-            }
-        }
-    }
-    function displayFizzBuzzOutput() { //displays array data in quick & dirty horizontal list
-        for (var i = 0; i < 100; i++) {
-            $("#fizzBuzzOutput").append(numbersFizzBuzz[i] + "<br />");
-        }
-    }
-});
-</code></pre>
-
-                                        </div><!-- second column row -->
-                                    </div><!--second column-->
+                                        </div><!-- Second Column Row -->
+                                    </div><!-- Second Column -->
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            </div><!-- /.modal-footer -->
-                                        </div><!--footer row-->
-                                    </div><!--footer column-->
-                                </div><!--main Row-->
-                        </div><!-- /.modal-body -->
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /.modal-top-->
-        </section>
-        @*<section id="projects-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title">
-                                <h1>Projects</h1>
-                                <span class="st-border"></span>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-wrapper">
+                                                <button type="button" class="btn btn-primary btn-lg ajbtnstyles" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.modal-body Main Row -->
+                            </div><!-- /.modal-body -->
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div><!--Container Row-->
+        </div><!--Container-->
+        <!-- Modal -->
+        <!--FizzBuzz Modal #myModal4-->
+        <div class="container col-md-12">
+            <div class="row">
                 <div class="col-md-12">
-                    <ul class="filter">
-                        <li><a class="active" href="#" data-filter="*">All</a></li>
-                        <li><a href="#" data-filter=".javascript">JavaScript</a></li>
-                        <li><a href="#" data-filter=".wordpress">WordPress</a></li>
-                        <li><a href="#" data-filter=".html">HTML</a></li>
-                        <li><a href="#" data-filter=".graphic">graphic</a></li>
-                        <li><a href="#" data-filter=".php">PHP</a></li>
-                        <li><a href="#" data-filter=".bootstrap">bootstrap</a></li>
-                    </ul><!--/#portfolio-filter-->
-                </div>
+                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title">FizzBuzz JavaScript</h4>
+                                </div>
+                                <div class="modal-body fizzyModalBody">
+                                    <div class="row">
+                                        <div class="col-md-4 fizzyLeftCol">
+                                            <div class="row">
+                                                <input type="number" name="numberFieldFizzBuzz" id="inputNumber1FizzBuzz" class="numberFieldFizzBuzz  ajModalInputFields" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="number" name="numberFieldFizzBuzz" id="inputNumber2FizzBuzz" class="numberFieldFizzBuzz  ajModalInputFields" maxlength="2" autocomplete="off" placeholder="Enter Number." required />
+                                                <input type="button" id="submitButtonFizzBuzz" class="submitButtonFizzBuzz btn btn-success ajbtnstyles" value="Submit">
+                                                <h4>Results:</h4>
+                                                <h4 id="fizzBuzzOutput"></h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 fizzyRightCol">
+                                            <div class="row">
 
-                <div class="portfolio-items">
+<pre class="line-numbers">
+<code class="language-css">
+    $(document).ready(function () {
+    var numbers = [],   
+        factor1 = null, 
+        factor2 = null;
+    /*Submit Button Click*/
+    $("div").on("click", "#submitButton", function () {
+        factor1 = $("#inputNumber1").val();
+        factor2 = $("#inputNumber2").val();
+        getCalculation();
+        displayOutput();
+    });
+    /*My Functions*/
+    function getCalculation() {
+        for (var i = 0; i < 100; i++) {
+            numbers[i] = i + 1;
+            if (0 == (numbers[i] % factor1)) {
+                if (0 == (numbers[i] % factor2)) {
+                    numbers[i] = "FizzBuzz";
+                }
+                else {
+                    numbers[i] = "Fizz";
+                }
+            }
+            else if (0 == numbers[i] % factor2) {
+                numbers[i] = "Buzz";
+            }
+        }
+    }
+    function displayOutput() { 
+        for (var i = 0; i < 100; i++) {
+            $("#fizzOutput").append(numbers[i] + "&ltbr/&gt");
+        }
+    }
+});
+</code></pre>
 
-                    <div class="col-md-4 col-sm-6 work-grid javascript graphic">
-                        <div class="portfolio-content">
-                            <img class="img-responsive" src="~/images/works/portfolio-1.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a href="~/images/works/portfolio-1.jpg"><i class="fa fa-camera-retro"></i></a>
-                                <h5>Javascript Palindrome</h5>
-                                <p>Exercise, JavaScript</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 work-grid html php bootstrap">
-                        <div class="portfolio-content">
-                            <img class="img-responsive" src="~/images/works/portfolio-2.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a href="~/images/works/portfolio-2.jpg"><i class="fa fa-camera-retro"></i></a>
-                                <h5>Web Development</h5>
-                                <p>Design, Develop</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 work-grid wordpress graphic">
-                        <div class="portfolio-content">
-                            <img class="img-responsive" src="~/images/works/portfolio-3.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a href="~/images/works/portfolio-3.jpg"><i class="fa fa-camera-retro"></i></a>
-                                <h5>Web Development</h5>
-                                <p>Design, Develop</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 work-grid html php bootstrap">
-                        <div class="portfolio-content">
-                            <img class="img-responsive" src="~/images/works/portfolio-4.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a href="~/images/works/portfolio-4.jpg"><i class="fa fa-camera-retro"></i></a>
-                                <h5>Web Development</h5>
-                                <p>Design, Develop</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 work-grid wordpress graphic php">
-                        <div class="portfolio-content">
-                            <img class="img-responsive" src="~/images/works/portfolio-5.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a href="~/images/works/portfolio-5.jpg"><i class="fa fa-camera-retro"></i></a>
-                                <h5>Web Development</h5>
-                                <p>Design, Develop</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 work-grid html bootstrap graphic">
-                        <div class="portfolio-content">
-                            <img class="img-responsive" src="~/images/works/portfolio-6.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a href="~/images/works/portfolio-6.jpg"><i class="fa fa-camera-retro"></i></a>
-                                <h5>Web Development</h5>
-                                <p>Design, Develop</p>
-                            </div>
-                        </div>
-                    </div>
-
+                                            </div><!-- second column row -->
+                                        </div><!--second column-->
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary btn-lg ajbtnstyles" data-dismiss="modal">Close</button>
+                                                </div><!-- /.modal-footer -->
+                                            </div><!--footer row-->
+                                        </div><!--footer column-->
+                                    </div><!--main Row-->
+                                </div><!-- /.modal-body -->
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal-top-->
                 </div>
             </div>
-
-                    </div>
-                </div>
-            </section>*@
-    </div>
+        </div>
+    </section>
 </body>
 </html>
