@@ -27,7 +27,7 @@ namespace PortfolioPage.Controllers
             return View();
         }
 
-        public ActionResult blog()
+        public ActionResult BlogPosts()
         {
             return View();
         }

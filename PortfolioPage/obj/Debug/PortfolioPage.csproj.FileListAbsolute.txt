@@ -77,6 +77,10 @@ C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Debug\PortfolioPage.csprojResolveAssemblyReference.cache
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Debug\PortfolioPage.dll
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Debug\PortfolioPage.pdb
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Debug\PortfolioPage.csprojResolveAssemblyReference.cache
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.Mvc.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.xml
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.Mvc.xml

@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using PortfolioPage.Models.CodeFirst;
+using System.Collections;
 
 namespace PortfolioPage.Models
 {
@@ -40,5 +41,6 @@ namespace PortfolioPage.Models
         }
         public DbSet<BlogPost> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public IEnumerable ApplicationUsers { get; internal set; }
     }
 }
