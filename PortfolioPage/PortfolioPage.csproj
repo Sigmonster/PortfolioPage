@@ -412,8 +412,8 @@
     <Content Include="Views\Comments\Edit.cshtml" />
     <Content Include="Views\Comments\Index.cshtml" />
     <Content Include="Views\Comments\BlogPostComments.cshtml" />
-    <Content Include="Views\Shared\_BlogCommentsPartial-old.cshtml" />
     <Content Include="Views\Shared\_BlogCommentsPartial.cshtml" />
+    <Content Include="Views\Shared\_BlogCommentAddPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
