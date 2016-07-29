@@ -405,12 +405,15 @@
     <Content Include="Views\BlogPosts\Edit.cshtml" />
     <Content Include="Views\BlogPosts\Index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
-    <Content Include="Views\Shared\_BlogPartial.cshtml" />
+    <Content Include="Views\Shared\_BlogButtonsPartial.cshtml" />
     <Content Include="Views\Comments\Create.cshtml" />
     <Content Include="Views\Comments\Delete.cshtml" />
     <Content Include="Views\Comments\Details.cshtml" />
     <Content Include="Views\Comments\Edit.cshtml" />
     <Content Include="Views\Comments\Index.cshtml" />
+    <Content Include="Views\Comments\BlogPostComments.cshtml" />
+    <Content Include="Views\Shared\_BlogCommentsPartial-old.cshtml" />
+    <Content Include="Views\Shared\_BlogCommentsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
