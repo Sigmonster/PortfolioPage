@@ -219,6 +219,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\StringUtilities.cs" />
+    <Compile Include="Models\MyClasses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -304,6 +305,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\members\team1.jpg" />
     <Content Include="images\members\team2.jpg" />
+    <Content Include="images\myimgs\gray-card.jpg" />
     <Content Include="images\office\02.jpg" />
     <Content Include="images\office\03.jpg" />
     <Content Include="images\office\04.jpg" />
@@ -362,6 +364,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Uploads\BusinessServer.jpg" />
+    <Content Include="Uploads\CatPC.jpg" />
+    <Content Include="Uploads\frabz-In-House-Programmer.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -396,7 +401,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\blog.cshtml" />
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\Resume.cshtml" />
     <Content Include="Views\BlogPosts\Create.cshtml" />
@@ -418,7 +422,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="CoderFoundryCodingExercises\PalindromeExercise\scripts\" />
-    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -70,11 +70,16 @@ namespace PortfolioPage.Controllers
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                UserDisplayName = CurrentUserDisplayName(), //AJ Created
+                UserEmail = CurrentUserEmail() //AJ Created
             };
+            var displayname = model.UserDisplayName;
             return View(model);
         }
-
+        //public string displayName { get; set; }
+        //public string firstName { get; set; }
+       // public string lastName { get; set; }
         //
         // POST: /Manage/RemoveLogin
         [HttpPost]
@@ -251,7 +256,6 @@ namespace PortfolioPage.Controllers
             return View();
         }
 
-        //
         // POST: /Manage/SetPassword
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -385,5 +389,18 @@ namespace PortfolioPage.Controllers
         }
 
 #endregion
+        //AJ Created
+        public string CurrentUserDisplayName()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            var UserDisplayName = user.DisplayName;
+            return (UserDisplayName);
+        }
+        public string CurrentUserEmail()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            var UserEmail = user.Email;
+            return (UserEmail);
+        }
     }
 }

@@ -1,0 +1,16 @@
+﻿@if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+{
+    <div class="row blog-details-btn-row">
+        <div class="row">
+            <ul>
+
+                <li><a class="btn btn-readmore blog-btns1" href='@Url.Action("Delete", "BlogPosts", new { id = Model.Id })'>Delete</a></li>
+                <li><a class="btn btn-readmore blog-btns1" href='@Url.Action("Edit", "BlogPosts", new { id = Model.Id })'>Edit</a></li>
+            </ul>
+        </div>
+    </div>
+}
+else if (Request.IsAuthenticated)
+{
+
+}

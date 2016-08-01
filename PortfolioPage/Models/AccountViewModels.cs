@@ -65,16 +65,27 @@ namespace PortfolioPage.Models
     public class RegisterViewModel
     {
         [Required]
+        [MaxLength(15, ErrorMessage = "First Name cannot be longer than 15 characters.")]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+        [Required]
+        [MaxLength(15, ErrorMessage = "Last Name cannot be longer than 15 characters.")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        [Required]
+        [MaxLength(12, ErrorMessage = "Display Name cannot be longer than 12 characters.")]
+        [Display(Name = "Display Name")]
+        [UniqueDisplayName]
+        public string DisplayName { get; set; }
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
-
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]

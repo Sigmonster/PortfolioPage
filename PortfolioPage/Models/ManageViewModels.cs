@@ -7,6 +7,8 @@ namespace PortfolioPage.Models
 {
     public class IndexViewModel
     {
+        public string UserDisplayName { get; set;}
+        public string UserEmail { get; set;}
         public bool HasPassword { get; set; }
         public IList<UserLoginInfo> Logins { get; set; }
         public string PhoneNumber { get; set; }

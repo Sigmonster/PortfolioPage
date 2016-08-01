@@ -80,3 +80,7 @@ C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Release\PortfolioPage.csprojResolveAssemblyReference.cache
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Release\PortfolioPage.dll
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\obj\Release\PortfolioPage.pdb
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.Mvc.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.xml
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.Mvc.xml

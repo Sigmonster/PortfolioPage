@@ -1,0 +1,116 @@
+﻿@model PortfolioPage.Models.CodeFirst.BlogPost
+
+@{
+    ViewBag.Title = "Edit";
+}
+ <!--Begin Form After Created Date/Time-->
+@using (Html.BeginForm("Edit", "BlogPosts", FormMethod.Post, new { enctype = "Multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+    @section scripts{
+        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+        <script>tinymce.init({ selector:'.textareablog' });</script>
+    }
+        <div class="container-fluid">
+            <div class="row">
+                <section class="title-header blog-pages-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title">
+                                    <h3>BlogPost Moderator-Section</h3><h4>Edit BlogPost</h4>
+                                    <span class="st-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container col-md-10 col-sm-10 col-xs-10 center-block blog-post-pagescontent">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 center-block">
+                            <div class="row">
+                                <!--########## Content of Code Begin Line ##########-->
+                                <div class="form-horizontal">
+                                    <h4>Edit BlogPost</h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Created, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10" style = "padding-top:7px;">                                            
+                                            @Html.HiddenFor(model => model.Created)
+                                            <p>@Model.Created</p>
+                                            @Html.ValidationMessageFor(model => model.Created, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Updated, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10"  style = "padding-top:7px;">
+                                            <p>@Model.Updated</p>
+                                            @Html.HiddenFor(model => model.Updated, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Updated, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>*
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Slug, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control textareablog" } })
+                                            @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.MediaURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            <input name="image" type="file" class="form-control" id="fileUpload" />
+                                            @Html.ValidationMessageFor(model => model.MediaURL, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Published, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <div class="checkbox">
+                                                @Html.EditorFor(model => model.Published)
+                                                @Html.ValidationMessageFor(model => model.Published, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Save Changes" class="btn btn-readmore" />
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                                <!--########## Content of Code END Line ##########-->
+                                <div class="row blog-details-btn-row">
+                                    <a class="btn btn-readmore" href='@Url.Action("Index", "BlogPosts")'>Back to Blog List</a>
+                                    <a class="btn btn-readmore" href='@Url.Action("Details", new { Slug = Model.Slug })'>Back to Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+<!--End Form-->

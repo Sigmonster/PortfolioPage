@@ -13,12 +13,14 @@
 
     
    <!-- Not commented out , looks like the above razor code may get the whole directory.-->
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/owl.carousel.css" />
     <link rel="stylesheet" href="~/css/magnific-popup.css" />
     <link rel="stylesheet" href="~/css/font-awesome.css" />
     <link rel="stylesheet" href="~/css/responsive.css" />
     <link rel="stylesheet" href="~/css/style.css" />
+
      
 
 
@@ -68,7 +70,7 @@
                             <li role="separator" class="divider"></li>
                         </ul>
                         <div class="loginlinks">@Html.Partial("_LoginPartial")</div>
-                          @*Antonio said to copy this to our new layout. Put it after the NavBar </ul> line.*@
+                        @*Antonio said to copy this to our new layout. Put it after the NavBar </ul> line.*@
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container row -->
                 <div class="row nav-ajlogin">
@@ -79,24 +81,24 @@
         </nav>
     </header>
 
-        @RenderBody()
+    @RenderBody()
 
-        <footer class="footer" id="footer">
-            <div class="container">
-                <div class="row">
-                    <!-- SOCIAL ICONS -->
-                    <div class="col-sm-6 col-sm-push-6 footer-social-icons">
-                        <span>Follow Me:</span>
-                        <a href=""><i class="fa fa-google-plus"></i></a>
-                        <a href=""><i class="fa fa-pinterest-p"></i></a>
-                    </div>
-                    <!-- /SOCIAL ICONS -->
-                    <div class="col-sm-6 col-sm-pull-6 copyright">
-                        <p>&copy; 2016 <a href="">Sigmonster Enterprises</a>. All Rights Reserved.</p>
-                    </div>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <!-- SOCIAL ICONS -->
+                <div class="col-sm-6 col-sm-push-6 footer-social-icons">
+                    <span>Follow Me:</span>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-pinterest-p"></i></a>
+                </div>
+                <!-- /SOCIAL ICONS -->
+                <div class="col-sm-6 col-sm-pull-6 copyright">
+                    <p>&copy; 2016 <a href="">Sigmonster Enterprises</a>. All Rights Reserved.</p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="~/js/jquery.min.js"></script>
     <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
@@ -120,6 +122,6 @@
     <!--My Javascript-->
     <script src="~/js/prism.js"></script>
     @RenderSection("scripts", required: false)
-   
+
 </body>
 </html>

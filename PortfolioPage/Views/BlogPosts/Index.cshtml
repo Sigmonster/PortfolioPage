@@ -1,0 +1,173 @@
+﻿@model IPagedList<PortfolioPage.Models.CodeFirst.BlogPost>
+
+@using PagedList;
+@using PagedList.Mvc;
+
+<head>
+    <meta charset="UTF-8">
+
+    @{
+        ViewBag.Title = "Blog";
+    }
+
+</head>
+<body>
+    <!-- HEADER -->
+    <!-- /HEADER -->
+    <!-- PAGE HEADER -->
+    <section id="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Blog</h1>
+                        <span class="st-border"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /PAGE HEADER -->
+    <!-- BLOG -->
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                    {<a class="btn btn-readmore" href='@Url.Action("Create", "BlogPosts")'>Create New</a>}
+                    <div class="col-md-3 pull-right">
+                        <div class="blog-search">
+                            @using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new { enctype = "Multipart/form-data" }))
+                            {
+                                <input type="text" name="searchStr" class="form-contol">
+                                <span>
+                                    <button id="submit_btn" class="search-submit" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            }
+                        </div>
+                        <a class="btn btn-readmore" href='@Url.Action("Index", "BlogPosts")'>Clear Search <i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    @foreach (var item in Model)
+                    {
+                        <div class="single-blog">
+                            <article>
+                                <div class="post-thumb">
+                                    @if (item.MediaURL != null)
+                                    {
+                                        <img class="img-responsive" src="@item.MediaURL" alt="">
+                                        <hr>
+                                    }
+                                    @*<img class="img-responsive" src="~/Images/blog/01.jpg" alt="">*@
+                                </div>
+                                <h4 class="post-title"><a href="">@Html.DisplayFor(modelItem => item.Title)</a></h4>
+                                <div class="post-meta text-uppercase">
+                                    <span>Created: @Html.DisplayFor(modelItem => item.Created)</span>
+                                    <span>By <a href="">Sigmonster(Admin)</a></span>
+                                </div>
+                                <div class="post-article">
+                                    @Html.Raw(item.Body);
+                                </div>
+                                <div class="row blog-btns1">
+                                    <a class="btn btn-readmore" href='@Url.Action("Details",new {Slug = item.Slug})'>Details</a>
+                                </div>
+                            </article>
+                        </div>
+                        <hr>
+                    }
+                    <div class="pagelist-btns">
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),PagedListRenderOptions.ClassicPlusFirstAndLast)
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="sidebar-widget">
+                        @*<div class="sidebar-widget">
+                            <h4 class="sidebar-title">Categories</h4>
+                            <ul>
+                                <li><a href="">Web Design</a></li>
+                                <li><a href="">Web Development</a></li>
+                                <li><a href="">Video</a></li>
+                                <li><a href="">HTML</a></li>
+                                <li><a href="">CSS</a></li>
+                            </ul>
+                        </div>*@
+                        <div class="sidebar-widget">
+                            <h4 class="sidebar-title">On This Page</h4>
+                            <ul class="content-flickr">
+@foreach (var item in Model)
+{
+    if (item.MediaURL != null)
+    {
+        <li>
+            <a href="@Url.Action("Details",new {Slug = item.Slug})" title="">
+                <img class="img-responsive" src="@item.MediaURL" alt="">
+            </a>
+        </li>
+    }
+    if (item.MediaURL == null)
+    {
+        <li>
+            <a class="" href="@Url.Action("Details",new {Slug = item.Slug})" title="">
+                <div class="img-wrapblg">
+                    <img class="img-responsive" src="~/images/myimgs/gray-card.jpg" alt="">
+                    <h6>@Html.DisplayFor(modelItem => item.Title)</h6>
+                </div>
+            </a>
+        </li>
+    }
+}
+                                @*<li>
+                                    <a href="#" title="">
+                                        <img class="img-responsive" src="~/Images/img1.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-responsive" src="~/Images/img2.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-responsive" src="~/Images/img3.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-responsive" src="~/Images/img4.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-responsive" src="~/Images/img5.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-responsive" src="~/Images/img6.png" alt="">
+                                    </a>
+                                </li>*@
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h4 class="sidebar-title">Tags</h4>
+                            <div class="tagcloud">
+                                <a href="">design</a>
+                                <a href="">html</a>
+                                <a href="">php</a>
+                                <a href="">wordpress</a>
+                                <a href="">css</a>
+                                <a href="">development</a>
+                                <a href="">theme</a>
+                                <a href="">plugin</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /BLOG -->
+</body>

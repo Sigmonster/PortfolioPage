@@ -1,0 +1,72 @@
+﻿@model IEnumerable<PortfolioPage.Models.CodeFirst.Comment>
+@if (Request.IsAuthenticated)
+{
+    <div class="row add-comments-row">
+        <a role="button" class="btn btn-readmore show-hide-btn" id="add-comments-show-hide-add">
+            <span class="comment-arrow-span-add"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
+            Add Comment
+            <span class="comment-arrow-span-add"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
+        </a>
+    </div>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><p style="padding:5px;">Create account or login to post comments!</p></li>
+    </ul>
+}
+<div class="Blog-Comments-Partial">
+    <div class="row">
+        <h4>Comments</h4>
+        <br />
+    </div>
+           @foreach (var item in Model)
+           {
+            <div class="row">
+                <div class="row">
+                    <p class="cmt-author-date">
+                        <strong>@Html.DisplayFor(modelItem => item.Author.DisplayName)</strong>
+                        @Html.DisplayFor(modelItem => item.Created)
+                    </p>
+                    
+                    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                    {
+                    <div name="moderator button dropdown" class="dropdown cmt-dropdown">
+                        <button class="btn btn-default dropdown-toggle glyphicon glyphicon-edit cmt-dropdown-btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                            <li><a class="" href='@Url.Action("Edit", "Comments", new { id = item.Id })'>Edit</a> </li>
+                            <li><a class="" href='@Url.Action("Details", "Comments", new { id = item.Id })'>Details</a> </li>
+                            <li><a class="" href='@Url.Action("Delete", "Comments", new { id = item.Id })'>Delete</a> </li>
+                        </ul>
+                    </div>
+                    }
+                </div>
+                @*<strong>@Html.DisplayFor(modelItem => item.Author.DisplayName)</strong>
+                @Html.DisplayFor(modelItem => item.Created)<br />
+                <p>@Html.DisplayFor(modelItem => item.Body)</p><br />*@
+                <p class="cmt-body-disp">@Html.DisplayFor(modelItem => item.Body)</p><br />
+                
+                @if (item.Updated != null)
+                {
+                    <p class="admin-edit-txt">
+                        <strong>Admin Edit: </strong>@Html.DisplayFor(modelItem => item.Updated)
+                        <strong>Reason: </strong>@Html.DisplayFor(modelItem => item.UpdateReason)
+
+                    </p>
+                }
+                @*@if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                {
+                    <div>
+                        <a class="btn btn-readmore cmt-mod-btns" href='@Url.Action("Edit", "Comments", new { id = item.Id })'>Edit Comment</a> 
+                        <a class="btn btn-readmore cmt-mod-btns" href='@Url.Action("Details", "Comments", new { id = item.Id })'>Deltails Comment</a> 
+                        <a class="btn btn-readmore cmt-mod-btns" href='@Url.Action("Delete", "Comments", new { id = item.Id })'>Delete Comment</a>
+                    </div>
+                    <br />
+                }*@
+            </div>
+
+           }
+
+</div>
