@@ -1,6 +1,25 @@
 ﻿/*Applied to Multiple Sections*/
 body {
 }
+/*Sticky Footer Not working...*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 125px 0; /* bottom = footer height */
+    
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 125px;
+    width:100%;
+}
+#footer a:hover{
+    color:aqua;
+}
 .st-service p{
     padding-right:10px; /*AJ added*/
 }
@@ -107,6 +126,24 @@ body {
 }
 .ajresumebtn{
     border: .8px solid;
+    background-color: #383838;
+    border-radius: 0;
+    border: 0;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color:white;
+    font-size:18px;
+}
+.ajresumebtn:focus, .ajresumebtn:hover{
+    color:aqua;
+    background-color:#262626;
 }
 .ajskills-container{
     margin-bottom:50px;
@@ -182,6 +219,14 @@ pallyRightCol{
     margin: 7% 7% 7% 4%;
 }
 /*9. Blog Section*/
+.blog-clr-srch{
+    margin:0 0 0 5px;
+    font-size:20px;
+    padding:8px 15px 8px 15px;
+}
+.blog-clr-srch:hover{
+    color:aqua;
+}
 .btn-readmore, .btn-readmore a{
     color: white;
 }
@@ -229,7 +274,7 @@ pallyRightCol{
 }
 .cmt-author-date{
     float: left;
-    padding: 15px;
+    padding: 15px 0px 0px 15px;
 }
 .cmt-dropdown{
     float:right;
@@ -248,8 +293,10 @@ pallyRightCol{
 .cmt-body-disp{
     width: 100%;
     overflow-wrap: break-word;
-    max-height: 150px;
-    overflow-y: scroll;
+    max-height: 275px;
+    overflow-y: auto;
+    border: lightgray solid 1px;
+    padding: 4px 0 4px 4px;
 }
 .cmt-tbl-body {
     width:300px;
@@ -312,18 +359,22 @@ textarea { /*Add Comment Test Body Style*/
     color:red;
 }
 /*9.2 BlogPost Manage Index*/
-.acc-manage dt{
+.acc-manage-table{
+}
+.acc-manage-table * {
+ text-align:left;
+}
+.acc-manage-table h5 {
     text-align: left;
     white-space: normal;
-    padding-bottom:10px;
+    padding:5px 0 0 0;
+    margin:0;
+    vertical-align:middle;
+}
+.acc-manage-table .row{
+   min-height:40px;
 }
 
-/*10. Sticky Footer CCS*/
-.footer {
-    /*position: relative;*/
-    width: 100%;
-    bottom: 0;
-}
 /*Responsive Styles*/
 @media screen and (max-width: 767.5px) {
     .nav-ajlogin{

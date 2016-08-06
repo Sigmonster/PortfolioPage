@@ -84,3 +84,8 @@ C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.Mvc.dll
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.xml
 C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\PagedList.Mvc.xml
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\SendGrid.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\SendGrid.SmtpApi.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\SendGridMail.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\System.Net.Http.Formatting.dll
+C:\Users\AJPC\Documents\Visual Studio 2015\Projects\PortfolioPage\PortfolioPage\bin\System.Net.Http.Formatting.xml

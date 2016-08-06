@@ -32,29 +32,33 @@
     <section id="blog">
         <div class="container">
             <div class="row">
-                <div class="row">
-                    <div class="col-xs-9">
-                        @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
-                        {<a class="btn btn-readmore" href='@Url.Action("Create", "BlogPosts")'>Create New</a>}
-                    </div>
-                    <div class="col-xs-2">
-                        <div class="row">
-
-                            <div class="blog-search">
-                                @using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new { enctype = "Multipart/form-data" }))
-                                {
-                                    <input type="text" name="searchStr" class="form-contol">
-                                    <span>
-                                        <button id="submit_btn" class="search-submit" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                }
-                            </div>
+                <div class="container col-xs-10 col-md-12 center-block">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8">
+                            @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                            {<a class="btn btn-readmore create-blg-btn" href='@Url.Action("Create", "BlogPosts")'>Create New</a>}
                         </div>
-                    </div><div class="col-xs-1">
                         <div class="row">
-                            <a class="btn btn-readmore blog-clr-srch" href='@Url.Action("Index", "BlogPosts")'><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                            <div class="col-xs-1 col-sm-0"></div>
+                            <div class="col-xs-8 col-md-2">
+                                <div class="row">
+                                    <div class="blog-search">
+                                        @using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new { enctype = "Multipart/form-data" }))
+                                        {
+                                            <input type="text" name="searchStr" class="form-contol">
+                                            <span>
+                                                <button id="submit_btn" class="search-submit" type="submit">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </span>
+                                        }
+                                    </div>
+                                </div>
+                            </div><div class="col-xs-1 col-md-1">
+                                <div class="row">
+                                    <a class="btn btn-readmore blog-clr-srch" href='@Url.Action("Index", "BlogPosts")'><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +86,7 @@
                                         <span>By <a href="">Sigmonster(Admin)</a></span>
                                     </div>
                                     <div class="post-article">
-                                        @Html.Raw(item.Body);
+                                        @Html.Raw(item.Body)
                                     </div>
                                     <div class="row blog-btns1">
                                         <a class="btn btn-readmore" href='@Url.Action("Details",new {Slug = item.Slug})'>Details</a>
@@ -181,7 +185,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- /BLOG -->
 </body>

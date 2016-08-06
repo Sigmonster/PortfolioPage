@@ -13,6 +13,7 @@ using PagedList;
 
 namespace PortfolioPage.Controllers
 {
+    [RequireHttps]
     public class CommentsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -20,19 +21,18 @@ namespace PortfolioPage.Controllers
         // GET: Comments
         public ActionResult Index(int? page)
         {
-            int pageSize = 6; // display three blog posts at a time on this page
-            int pageNumber = (page ?? 1);
             var comments = db.Comments.Include(c => c.Author).Include(c => c.Post);
-            return View(comments.OrderByDescending(p => p.Created).ToPagedList(pageNumber, pageSize));//pagelist needs view work
+            return View(comments); 
         }
-        public ActionResult BlogPostComments(int? id, int? page)
-        {
-            int pageSize = 6; // display three blog posts at a time on this page
-            int pageNumber = (page ?? 1);
-            var post = db.Posts.Find(id);
-            var comments = post.Comments.ToList().OrderByDescending(p => p.Created);
-            return View(comments);//pagelist needs view work
-        }
+
+        //public ActionResult BlogPostComments(int? id, int? page)
+        //{
+           //int pageSize = 6; // display three blog posts at a time on this page
+           //int pageNumber = (page ?? 1);
+           //var post = db.Posts.Find(id);
+           //var comments = post.Comments.OrderByDescending(p => p.Created).ToPagedList(pageNumber, pageSize);
+           //return View(comments);//pagelist needs view work
+        //}
 
         // GET: Comments/Details/5
         [Authorize(Roles = "Moderator, Admin")]

@@ -25,7 +25,14 @@ else
             <div class="row">
                 <div class="row">
                     <p class="cmt-author-date">
+                        @if (item.Author.DisplayName != null)
+                        {
                         <strong>@Html.DisplayFor(modelItem => item.Author.DisplayName)</strong>
+                        }
+                        else
+                        {
+                        <strong>@Html.DisplayFor(modelItem => item.Author.Email)</strong>
+                        }
                         @Html.DisplayFor(modelItem => item.Created)
                     </p>
                     
