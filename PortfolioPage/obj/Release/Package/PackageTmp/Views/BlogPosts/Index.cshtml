@@ -32,29 +32,33 @@
     <section id="blog">
         <div class="container">
             <div class="row">
-                <div class="row">
-                    <div class="col-xs-9">
-                        @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
-                        {<a class="btn btn-readmore" href='@Url.Action("Create", "BlogPosts")'>Create New</a>}
-                    </div>
-                    <div class="col-xs-2">
-                        <div class="row">
-
-                            <div class="blog-search">
-                                @using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new { enctype = "Multipart/form-data" }))
-                                {
-                                    <input type="text" name="searchStr" class="form-contol">
-                                    <span>
-                                        <button id="submit_btn" class="search-submit" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                }
-                            </div>
+                <div class="container col-xs-10 col-md-12 center-block">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8">
+                            @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                            {<a class="btn btn-readmore create-blg-btn" href='@Url.Action("Create", "BlogPosts")'>Create New</a>}
                         </div>
-                    </div><div class="col-xs-1">
                         <div class="row">
-                            <a class="btn btn-readmore blog-clr-srch" href='@Url.Action("Index", "BlogPosts")'><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                            <div class="col-xs-1 col-sm-0"></div>
+                            <div class="col-xs-8 col-md-2">
+                                <div class="row">
+                                    <div class="blog-search">
+                                        @using (Html.BeginForm("Index", "BlogPosts", FormMethod.Get, new { enctype = "Multipart/form-data" }))
+                                        {
+                                            <input type="text" name="searchStr" class="form-contol">
+                                            <span>
+                                                <button id="submit_btn" class="search-submit" type="submit">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </span>
+                                        }
+                                    </div>
+                                </div>
+                            </div><div class="col-xs-1 col-md-1">
+                                <div class="row">
+                                    <a class="btn btn-readmore blog-clr-srch" href='@Url.Action("Index", "BlogPosts")'><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,25 +71,28 @@
                                 <div class="post-thumb">
                                     @if (item.MediaURL != null)
                                     {
-                                        <img class="img-responsive" src="@item.MediaURL" alt="">
+                                        <img class="img-responsive blog-img" src="@item.MediaURL" alt="">
                                         <br />
                                         <hr />
 
                                     }
                                     @*<img class="img-responsive" src="~/Images/blog/01.jpg" alt="">*@
                                 </div>
-                                <a href='@Url.Action("Details",new {Slug = item.Slug})'>
+                                <a class="blog-link-text" href='@Url.Action("Details",new {Slug = item.Slug})'>
                                     <h4 class="post-title">@Html.DisplayFor(modelItem => item.Title)</h4>
                                 </a>
                                     <div class="post-meta text-uppercase">
-                                        <span>Created: @Html.DisplayFor(modelItem => item.Created)</span>
-                                        <span>By <a href="">Sigmonster(Admin)</a></span>
+                                        <div class="row col-md-5">
+                                            <p class="text-muted blog-post-meta pull-left">By Sigmonster(Admin)</p>
+                                            <p class="text-muted blog-post-meta pull-right">@Html.DisplayFor(modelItem => item.Created)</p>
+                                        </div>
+                                        <span><a href=""></a></span>
                                     </div>
                                     <div class="post-article">
                                         @Html.Raw(item.Body)
                                     </div>
                                     <div class="row blog-btns1">
-                                        <a class="btn btn-readmore" href='@Url.Action("Details",new {Slug = item.Slug})'>Details</a>
+                                        <a class="btn btn-readmore" href='@Url.Action("Details",new {Slug = item.Slug})'>Read More</a>
                                     </div>
                         </article>
                         </div>
@@ -181,7 +188,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- /BLOG -->
 </body>

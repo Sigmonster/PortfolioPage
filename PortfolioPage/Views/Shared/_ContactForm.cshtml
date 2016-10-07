@@ -1,0 +1,31 @@
+﻿@using PortfolioPage.Models
+@model ContactFormViewModel
+@{ 
+    var contactModel = (ContactFormViewModel)ViewData["ContactFormModel"];
+}
+<form action="/Account/ContactForm" class="form-inline contact-form" name="ContactForm" method="post">
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="row">
+                <span style="color:red; width:100%; text-align:center;">@ViewBag.ContactFormError</span>
+            </div>
+        <div class="col-sm-6">
+            <input type="text" name="Name" class="contact-fields" required="required" placeholder="Name*" value="@contactModel.Name">
+        </div>
+        <div class="col-sm-6">
+            <input type="email" name="Email" class="contact-fields" required="required" placeholder="Email*" value="@contactModel.Email">
+        </div>
+        <div class="col-sm-6">
+            <input type="text" name="Subject" class="contact-fields" placeholder="Subject" value="@contactModel.Subject">
+        </div>
+        <div class="col-sm-6">
+            <input type="text" name="Website" class="contact-fields" placeholder="Website" value="@contactModel.Website">
+        </div>
+        <div class="col-sm-12">
+            <textarea name="Message" required="required" class="contact-fields" cols="30" rows="7" placeholder="Message*" value="@contactModel.Message"></textarea>
+        </div>
+        <div class="col-sm-12">
+            <input type="submit" name="submit" value="Send Message" class="btn btn-send">
+        </div>
+    </div>
+</form>

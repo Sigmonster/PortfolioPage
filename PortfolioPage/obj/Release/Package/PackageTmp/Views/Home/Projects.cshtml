@@ -23,17 +23,20 @@
                     <div class="col-md-12">
                         <ul class="filter">
                             <li><a class="active" href="#" data-filter="*">All</a></li>
-                            <li><a href="#" data-filter=".wordpress">WordPress</a></li>
+                            @*<li><a href="#" data-filter=".wordpress"></a></li>*@
                             <li><a href="#" data-filter=".html">HTML</a></li>
                             <li><a href="#" data-filter=".zJavaScript">JavaScript</a></li>
-                            <li><a href="#" data-filter=".php">PHP</a></li>
-                            <li><a href="#" data-filter=".bootstrap">bootstrap</a></li>
+                            @*<li><a href="#" data-filter=".php"></a></li>*@
+                            <li><a href="#" data-filter=".bootstrap">bootstrap</a></li> 
+                            <li><a href="#" data-filter=".dot-net">ASP.NET</a></li>
+                            <li><a href="#" data-filter=".csharp">C#</a></li>
+                            <li><a href="#" data-filter=".web-API">Web API</a></li>
+                            <li><a href="#" data-filter=".web-app">App</a></li>
                         </ul><!--/#portfolio-filter-->
                     </div>
 
                     <div class="portfolio-items">
-
-                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                        <div class="col-md-4 col-sm-6 work-grid zJavaScript">
                             <!--JavaScript FizzBuzz Modal Trigger-->
                             <div class="portfolio-content">
                                 <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
@@ -45,63 +48,90 @@
                                 </a>
                             </div>
                         </div>
-
-                        <div class="col-md-4 col-sm-6 work-grid html php bootstrap">
+                        <!--BugTracker-->
+                        <div class="col-md-4 col-sm-6 work-grid zJavaScript bootstrap html zJavaScript web-app csharp dot-net">
                             <div class="portfolio-content">
-                                <img class="img-responsive" src="../../images/works/portfolio-2.jpg" alt="">
+                                <img class="img-responsive" src="../../images/myimgs/ProjectIMGs/BTSmall2.png" alt="">
+                                <a href="//ajsigmonbt.azurewebsites.net" target="_blank">
+                                    <div class="portfolio-overlay">
+                                        <h5>BugTracker Application</h5>
+                                        <p>C#, ASP.NET, Entity Framework, MVC5, HTML/CSS, Bootstrap, Javascript</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Budgeter-->
+                        <div class="col-md-4 col-sm-6 work-grid zJavaScript bootstrap html web-app csharp dot-net">
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/myimgs/ProjectIMGs/HouseholdBudgeter.png" alt="">
+                                <a href="//ajsigmon-Budgeter.azurewebsites.net" target="_blank">
+                                    <div class="portfolio-overlay">
+                                        <h5>Household Budgeter Application</h5>
+                                        <p>C#, ASP.NET, Entity Framework, MVC5, HTML/CSS, Bootstrap, Javascript, AJAX</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--CarFinder-->
+                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript web-app web-API csharp dot-net">
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/myimgs/ProjectIMGs/carfinderimg.png" alt="">
+                                <a data-toggle="modal" href="#myModal5">
+                                    <div class="portfolio-overlay">
+                                        <h5>BugTracker Application</h5>
+                                        <p> Web API, C#, ASP.NET, Entity Framework, MVC5, HTML/CSS, Javascript</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 work-grid html bootstrap">
+                            <!-- ####### blank #######-->
+                            <div class="portfolio-content">
+                                <img class="img-responsive" src="../../images/works/portfolio-4.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="images/works/portfolio-2.jpg"><i class="fa fa-camera-retro"></i></a>
+                                    <a href="#"><i class="fa fa-camera-retro"></i></a>
                                     <h5>Web Development</h5>
                                     <p>Design, Develop</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                        <div class="col-md-4 col-sm-6 work-grid zJavaScript">
                             <!--JavaScript Palindrome Modal Trigger-->
                             <div class="portfolio-content">
                                 <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
                                 <a data-toggle="modal" href="#myModal3">
                                     <div class="portfolio-overlay">
                                         <h5>Palindrome Challenge</h5>
-                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                        <p>JavaScript & JQuery</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 work-grid html php bootstrap">
-                            <div class="portfolio-content">
-                                <img class="img-responsive" src="../../images/works/portfolio-4.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a href="images/works/portfolio-4.jpg"><i class="fa fa-camera-retro"></i></a>
-                                    <h5>Web Development</h5>
-                                    <p>Design, Develop</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
+                        <div class="col-md-4 col-sm-6 work-grid zJavaScript">
                             <!--JavaScript Factorial Modal Trigger-->
                             <div class="portfolio-content">
                                 <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
                                 <a data-toggle="modal" href="#myModal2">
                                     <div class="portfolio-overlay">
                                         <h5>Factorial Challenge</h5>
-                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                        <p>JavaScript & JQuery</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 work-grid html bootstrap zJavaScript">
-                            <!--JavaScript-->
+                        <div class="col-md-4 col-sm-6 work-grid zJavaScript">
+                            <!--JavaScript Numbers Challenge-->
                             <div class="portfolio-content">
                                 <img class="img-responsive" src="../../images/works/JavaScriptIMG.png" alt="">
                                 <a data-toggle="modal" href="#myModal1">
                                     <div class="portfolio-overlay">
                                         <h5>Numbers Challenge</h5>
-                                        <p>JavaScript, JQuery, & Bootstrap</p>
+                                        <p>JavaScript & JQuery</p>
                                     </div>
                                 </a>
                             </div>
@@ -488,6 +518,34 @@ $(document).ready(function() {
                 </div>
             </div>
         </div>
+        <div class="container col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title">Web API</h4>
+                                </div>
+                                <div class="modal-body webAPI">
+                                    <div class="col-md-11 center-block">
+                                        <div class="row">
+                                            <iframe style="width:100%; height:500px;" src="https://ajsigmon-carfinder.azurewebsites.net/"></iframe>
+
+                                        </div>
+                                    </div>
+                                            <div class="modal-footer">
+                                                <button type="button" style="margin:5px;" class="btn btn-primary btn-lg ajbtnstyles" data-dismiss="modal">Close</button>
+                                            </div><!-- /.modal-footer -->
+                                </div><!-- /.modal-body -->
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal-top-->
+                </div>
+            </div>
+        </div>
+      
     </section>
 </body>
 </html>

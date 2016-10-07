@@ -4,63 +4,125 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Comment</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Author.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Author.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Post.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Post.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Body)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Body)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Created)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Created)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Updated)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Updated)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdateReason)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdateReason)
-        </dd>
-
-    </dl>
+<div class="container-fluid">
+    <div class="row">
+        <section class="title-header blog-pages-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h3>Comment Details</h3>
+                            <span class="st-border"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container col-md-10 col-sm-10 col-xs-10 center-block blog-post-pagescontent">
+            <div class="row">
+                <div class="col-xs-10 center-block">
+                    <br />
+                    <div class="col-xs-12 cmt-details-table">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>Created</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <p class="p-style">@Model.Created</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <h5>Updated</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <p class="p-style">@Model.Updated</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>Update Reason</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <p class="p-style">@Model.UpdateReason</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>Post Title</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <a></a><p class="p-style">@Model.Post.Title</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>PostID</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <p class="p-style">@Model.PostId</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>Author</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <p class="p-style">@Model.Author.DisplayName</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>AuthorID</h5>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <p class="p-style">@Model.Author.Id</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h5>Body</h5>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="cmt-tbl-body">
+                                            @Html.DisplayFor(model => model.Body)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="row blog-details-btn-row">
+                        <br />
+                        <hr />
+                        <a class="btn btn-readmore" href='@Url.Action("Index", "BlogPosts")'>Back to Blog List</a>
+                        <a class="btn btn-readmore" href='@Url.Action("Index", "Comments")'>Go to Comments List</a>
+                        <a class="btn btn-readmore" href='@Url.Action("Edit", "Comments", new { id = Model.Id })'>Edit This Comment</a>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+

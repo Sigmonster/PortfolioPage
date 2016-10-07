@@ -110,6 +110,9 @@
                     <img src="~/images/icon/dev/sys/windows8-original.svg" />
                 </li>
                 <li>
+                    <img src="~/images/icon/dev/sys/Office365.png" />
+                </li>
+                <li>
                     <img src="~/images/icon/dev/sys/linux-original.svg" />
                 </li>
                 <li>
@@ -127,30 +130,38 @@
                 <li>
                     <img src="~/images/icon/dev/sys/ssh-original-wordmark.svg" />
                 </li>
-                <li>
-
-                </li>
             </ul>
         </div>
     </div>
     <section id="fun-facts">
-        <div class="container col-xs-10 center-block">
+        <div class="container">
             <div class="row">
-                <p>
-                    I have experience working in technology as a Systems Administrator and I'm pivoting my
-                    career to Development. Software Development and Programming have always interested me and I think now is the
-                    perfect time for me to change paths. I have experience with Windows, Linux, Computer Hardware, and various types of Enterprise Software Systems.
-                    I like infrastructure and I'm really good and it but the field is overly crowded. I believe that  the traditional Systems Admin role that the industry has known for the
-                    past decade is fading, but these roles are changing into a position for someone who has the traditional SysAdmin skills but who can
-                    also code. I think biggest reason the traditional SysAdmin market is shrinking, is because of more affordable
-                    cloud hosting. Cost effective cloud hosting is causing many companies to vitrualize the bulk of their infrastructure and, many
-                    software companies are utlizing the cloud and changing their business models to subscription-based SaaS model. Both
-                    of these things contribute to less need for System Admins and more need for specific Admins that are application/system centric.
-                    From personal experience, most companies that are looking to fill traditional Systems Admins
-                    positions are requiring 10-15+ years of experience and care less about what practical skills a candidate has. Software
-                    development on the other hand is about experience, but more about what you know and what your skills are. This is important
-                    to me because I am a quick learner and I enjoy learning about all aspects of technology.
-                </p>
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>About Me</h1>
+                        <span class="st-border"></span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-xs-12 col-md-8" style="text-align: justify;">
+                        <p>
+                            I have experience working in technology as a systems administrator and I'm pivoting my career to software development. My past has included professional experience with Windows, Linux, computer hardware, and various enterprise software systems. Additionally, I have formal and informal education in the field of IT (see resume).
+                        </p>
+                        <p>
+                            Being a systems administrator was engaging work, and though I was good at it, I wanted a new challenge and decided to change paths. I have a natural talent for technology and cherish the ability to learn about new technologies. The further I delve into software development, the more I see how invaluable it can be for all IT professionals to have solid development skills.
+                        </p>
+                        <p>
+                            I'm not disappointed that I spent years in the field as a systems administrator, because everything I learned in my past is making me a stronger and more effective developer today. I am pleased to say that I enjoy development more than I ever thought possible; in fact, when I’m writing code it doesn't even feel like work.
+                        </p>
+                        <p>
+                            Now that you know a little about me, feel free to reach out to me via the contact section below, or head over to my blog to read about what I'm currently up to!
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                            <img class="img-responsive img-thumbnail" style="margin-top: 80px;"src="~/images/myimgs/IMG_AJ_Sigmon_red.jpg" />
+                            @*<img class="img-responsive img-circle" src="~/images/myimgs/IMG_AJ_Sigmon_ThumbTransparent.png" />*@
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -166,34 +177,13 @@
                     </div>
                 </div>
                 <div class="col-sm-4 contact-info">
-                    <p class="contact-content">Please feel free to reach out to me, but no recruiters please.</p>
+                    <p class="contact-content">Do not hesitate to contact me, I will be pleased to hear from you! No tech recruitment firms please.</p>
                     <p class="st-address"><i class="fa fa-map-marker"></i> <strong>Charlotte, NC US</strong></p>
                     <p class="st-website"><i class="fa fa-globe"></i> <strong><a href="https://ajsigmon.azurewebsites.net/">www.ajsigmon.azurewebsites.net</a></strong></p>
 
                 </div>
                 <div class="col-sm-7 col-sm-offset-1">
-                    <form action="php/send-contact.php" class="contact-form" name="contact-form" method="post">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="text" name="name" class="contact-fields" required="required" placeholder="Name*">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="email" name="email" class="contact-fields" required="required" placeholder="Email*">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" name="subject" class="contact-fields" placeholder="Subject">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" name="website" class="contact-fields" placeholder="Website">
-                            </div>
-                            <div class="col-sm-12">
-                                <textarea name="message" required="required" class="contact-fields" cols="30" rows="7" placeholder="Message*"></textarea>
-                            </div>
-                            <div class="col-sm-12">
-                                <input type="submit" name="submit" value="Send Message" class="btn btn-send">
-                            </div>
-                        </div>
-                    </form>
+                    @Html.Partial("_ContactForm")
                 </div>
             </div>
         </div>

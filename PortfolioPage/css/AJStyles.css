@@ -1,25 +1,32 @@
 ﻿/*Applied to Multiple Sections*/
-html {
-    position: relative;
+html, body {
+
     min-height: 100%;
 }
-body {
-    margin: 0 0 125px 0; /* bottom = footer height */
+body{
+    font-size: 15px;
+    font-weight:normal;
 }
 .btn-readmore, .btn-readmore a{
     color: white;
 }
 /*Sticky Footer*/
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+footer, .page-wrapper:after {
     height: 125px;
     width:100%;
+}
+.page-wrapper{
+    min-height:100%;
+    margin-bottom:-125px;
+}
+.page-wrapper:after{
+    content:"";
+    display:block;
 }
 #footer a:hover{
     color:aqua;
 }
+/*Sticky Footer*/
 .st-service p{
     padding-right:10px;
 }
@@ -125,9 +132,10 @@ line-height:120%
     height:55px;
 }
 #fun-facts p{
-    font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
 }
+/*1.2.3 Contact Form Section*/
+
 /*4. Resume Section AJ Added*/ 
 .ajresume-content{
     padding-bottom:100px;
@@ -135,6 +143,14 @@ line-height:120%
 #resume-iframe{
     width:100%;
     height:600px;
+}
+#resumeFollowMeWrapper
+{
+    font-size: 20px;
+    margin-top: 20px;
+}
+#resumeFollowMeWrapper a:focus, #resumeFollowMeWrapper a:hover {
+    color: aqua;
 }
 .ajresumebtnrow{
     float:right;
@@ -247,6 +263,32 @@ pallyRightCol{
 
     }
 }
+.blog-post-meta{
+    margin-right: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.6;
+    line-height: 1.7857;
+    letter-spacing: 0.075em;
+    color: #000;
+}
+
+.post-article{
+    max-height: 175px;
+    overflow: hidden;
+    text-overflow: ellipsis; /*need to get JS for this to work properly.*/
+}
+.blog-link-text:hover{
+    position:relative;
+    bottom:1px;
+    color:aqua;
+
+}
+.post-article a:hover{
+    color: aqua;
+    position:relative;
+    bottom:1px;
+}
 .blog-btns1{
     padding-left:15px;
 }
@@ -262,6 +304,9 @@ pallyRightCol{
 
 .blog-btns1{
 
+}
+.blog-img{
+    max-height:350px;
 }
 .blog-pages-header{
     padding-top:20px;

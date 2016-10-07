@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PortfolioPage.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,8 @@ namespace PortfolioPage.Controllers
     {
         public ActionResult Index()
         {
+            var newModel = new ContactFormViewModel();
+            ViewData["ContactFormModel"] = (ContactFormViewModel)newModel;
             return View();
         }
 

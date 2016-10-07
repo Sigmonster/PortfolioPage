@@ -16,6 +16,7 @@ namespace PortfolioPage.Controllers
     [RequireHttps]
     public class AccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -243,6 +244,38 @@ namespace PortfolioPage.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+        //
+        //Post: /Home/Index PortfolioContactForm
+        [AllowAnonymous]
+        [HttpPost, ActionName("ContactForm")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ContactForm([Bind(Include = "Email,Name,Subject,Website,Message")] ContactFormViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = db.Users.FirstOrDefault(u => u.UserName == "alexandersigmon@gmail.com");
+                var EmailService = new EmailService();
+                var message = new IdentityMessage();
+                var newModel = new ContactFormViewModel();
+                message.Body = model.Message + "<br> Website: " +model.Website+ " From Email: " + model.Email + "Name: " + model.Name;
+                message.Subject = model.Subject;
+                message.Destination = "alexandersigmon@gmail.com";
+
+                await EmailService.SendAsync(message);
+                //await UserManager.SendEmailAsync(user.Id, "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+
+                ViewData["ContactFormModel"] = (ContactFormViewModel)newModel;
+                return RedirectToAction("Index", "Home");
+                //return PartialView("~/Views/Shared/_ContactForm.cshtml");
+            }
+            else
+            {
+                ViewData["ContactFormModel"] = (ContactFormViewModel)model;
+                ViewBag.ContactFormError = "There was an Error, Make sure you fill out all fields.";
+                //return PartialView("~/Views/Shared/_ContactForm.cshtml");
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         //

@@ -120,4 +120,27 @@ namespace PortfolioPage.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+
+    public class ContactFormViewModel
+    {
+        public ContactFormViewModel()
+        {
+            //Email = " ";
+            //Name = " ";
+            //Subject = " ";
+            //Website = " ";
+            //Message = " ";
+        }
+        [EmailAddress]
+        [Required]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Subject { get; set; }
+        public string Website { get; set; }
+        [Required]
+        public string Message { get; set; }
+    }
 }
